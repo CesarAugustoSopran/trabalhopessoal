@@ -97,7 +97,43 @@
             </div>
           </div>
         </div>
+        
         <!-- Adicione mais itens de carrossel conforme necessário -->
+
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card">
+                <img src="img/image4.jpg" class="card-img-top" alt="Game 1" style="height: 350px; width: auto;">
+                <div class="card-body">
+                  <h5 class="card-title">Título do Jogo 4</h5>
+                  <p class="card-text">R$29.99</p>
+                  <a href="detalhe_produto.html" class="btn btn-primary">Detalhes</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <img src="img/image5.jpg" class="card-img-top" alt="Game 2" style="height: 350px; width: auto;">
+                <div class="card-body">
+                  <h5 class="card-title">Título do Jogo 5</h5>
+                  <p class="card-text">R$39.99</p>
+                  <a href="detalhe_produto.html" class="btn btn-primary">Detalhes</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <img src="img/image6.jpg" class="card-img-top" alt="Game 2" style="height: 350px; width: auto;">
+                <div class="card-body">
+                  <h5 class="card-title">Título do Jogo 6</h5>
+                  <p class="card-text">R$39.99</p>
+                  <a href="detalhe_produto.html" class="btn btn-primary">Detalhes</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselGames" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
