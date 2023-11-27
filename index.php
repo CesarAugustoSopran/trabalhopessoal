@@ -7,6 +7,7 @@
   <title>Loja de Games</title>
   <!-- Inclua o Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="estilos/estilo.css" rel="stylesheet">
 </head>
 
 <body>
@@ -17,35 +18,27 @@
     <p>Encontre os melhores jogos aqui!</p>
   </header>
 
-  <section class="container my-4">
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card">
-          <img src="banner1.jpg" class="card-img-top" alt="Banner 1">
-          <div class="card-body">
-            <h5 class="card-title">Promoção 1</h5>
-            <p class="card-text">Descrição da promoção 1.</p>
-          </div>
+  <section class="container container-banner">
+    <div id="carouselBanners" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/image1.jpg" class="d-block w-100 imagem-banner" alt="Game 1">
+        </div>
+        <div class="carousel-item">
+          <img src="img/image2.jpg" class="d-block w-100 imagem-banner" alt="Game 2">
+        </div>
+        <div class="carousel-item">
+          <img src="img/image3.jpg" class="d-block w-100 imagem-banner" alt="Game 3">
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="card">
-          <img src="banner2.jpg" class="card-img-top" alt="Banner 2">
-          <div class="card-body">
-            <h5 class="card-title">Promoção 2</h5>
-            <p class="card-text">Descrição da promoção 2.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card">
-          <img src="banner3.jpg" class="card-img-top" alt="Banner 3">
-          <div class="card-body">
-            <h5 class="card-title">Promoção 3</h5>
-            <p class="card-text">Descrição da promoção 3.</p>
-          </div>
-        </div>
-      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselBanners" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselBanners" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Próximo</span>
+      </button>
     </div>
   </section>
 
@@ -67,7 +60,7 @@
           <div class="row">
             <div class="col-md-4">
               <div class="card">
-                <img src="img/image1.jpg" class="card-img-top" alt="Game 1" style="height: 350px; width: auto;">
+                <img src="img/image1.jpg" class="card-img-top imagem-jogo-destaque" alt="Game 1">
                 <div class="card-body">
                   <h5 class="card-title">Título do Jogo 1</h5>
                   <p class="card-text">R$29.99</p>
@@ -77,7 +70,7 @@
             </div>
             <div class="col-md-4">
               <div class="card">
-                <img src="img/image2.jpg" class="card-img-top" alt="Game 2" style="height: 350px; width: auto;">
+                <img src="img/image2.jpg" class="card-img-top imagem-jogo-destaque" alt="Game 2">
                 <div class="card-body">
                   <h5 class="card-title">Título do Jogo 2</h5>
                   <p class="card-text">R$39.99</p>
@@ -87,7 +80,7 @@
             </div>
             <div class="col-md-4">
               <div class="card">
-                <img src="img/image3.jpg" class="card-img-top" alt="Game 2" style="height: 350px; width: auto;">
+                <img src="img/image3.jpg" class="card-img-top imagem-jogo-destaque" alt="Game 2">
                 <div class="card-body">
                   <h5 class="card-title">Título do Jogo 2</h5>
                   <p class="card-text">R$39.99</p>
@@ -100,11 +93,11 @@
         
         <!-- Adicione mais itens de carrossel conforme necessário -->
 
-        <div class="carousel-item active">
+        <div class="carousel-item">
           <div class="row">
             <div class="col-md-4">
               <div class="card">
-                <img src="img/image4.jpg" class="card-img-top" alt="Game 1" style="height: 350px; width: auto;">
+                <img src="img/image4.jpg" class="card-img-top imagem-jogo-destaque" alt="Game 1">
                 <div class="card-body">
                   <h5 class="card-title">Título do Jogo 4</h5>
                   <p class="card-text">R$29.99</p>
@@ -114,7 +107,7 @@
             </div>
             <div class="col-md-4">
               <div class="card">
-                <img src="img/image5.jpg" class="card-img-top" alt="Game 2" style="height: 350px; width: auto;">
+                <img src="img/image5.jpg" class="card-img-top imagem-jogo-destaque" alt="Game 2">
                 <div class="card-body">
                   <h5 class="card-title">Título do Jogo 5</h5>
                   <p class="card-text">R$39.99</p>
@@ -124,7 +117,7 @@
             </div>
             <div class="col-md-4">
               <div class="card">
-                <img src="img/image6.jpg" class="card-img-top" alt="Game 2" style="height: 350px; width: auto;">
+                <img src="img/image6.jpg" class="card-img-top imagem-jogo-destaque" alt="Game 2">
                 <div class="card-body">
                   <h5 class="card-title">Título do Jogo 6</h5>
                   <p class="card-text">R$39.99</p>
@@ -136,7 +129,7 @@
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselGames" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="carousel-control-prev-icon"></span>
         <span class="visually-hidden">Anterior</span>
       </button>
       <button class="carousel-control-next" type="button" data-bs-target="#carouselGames" data-bs-slide="next">
