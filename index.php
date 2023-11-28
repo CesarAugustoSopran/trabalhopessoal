@@ -11,25 +11,32 @@
 </head>
 
 <body>
+  <?php
+    include("conexao.php");
+  ?>
 
   <!-- Cabeçalho -->
   <header class="bg-dark text-light text-center py-3">
-    <h1>Loja de Games</h1>
-    <p>Encontre os melhores jogos aqui!</p>
+    <div class="d-flex justify-content-between align-items-center">
+      <a href="/trabalhopessoal" class="ms-3" style="color: white;text-decoration: none;"><h1>Loja de Games</h1></a>
+      <a href="/trabalhopessoal/gerenciador" class="me-3" style="color: white;text-decoration: none;">Gerenciador</a>
+    </div>
   </header>
 
   <section class="container container-banner">
     <div id="carouselBanners" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="gerenciador/img/image1.jpg" class="d-block w-100 imagem-banner" alt="Game 1">
-        </div>
-        <div class="carousel-item">
-          <img src="gerenciador/img/image2.jpg" class="d-block w-100 imagem-banner" alt="Game 2">
-        </div>
-        <div class="carousel-item">
-          <img src="gerenciador/img/image3.jpg" class="d-block w-100 imagem-banner" alt="Game 3">
-        </div>
+        <?php  
+          $primeiro = 'active';
+          $dados2 = mysqli_query($conexao, "SELECT * FROM banners"); 
+          while ($banner = mysqli_fetch_array($dados2)): 
+        ?>
+          <div class="carousel-item <?php print $primeiro;$primeiro=''; ?>">
+            <a href="jogo.php?id=<?php print $banner['jogo']; ?>"><img src="gerenciador/img/<?php print $banner['imagem']; ?>" class="d-block w-100 imagem-banner" alt="<?php print $banner['nome']; ?>"></a>
+          </div>
+        <?php 
+          endwhile;
+        ?>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselBanners" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -57,74 +64,35 @@
     <div id="carouselGames" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <div class="row">
-            <div class="col-md-4">
-              <div class="card">
-                <img src="gerenciador/img/image1.jpg" class="card-img-top imagem-jogo-destaque" alt="Game 1">
-                <div class="card-body">
-                  <h5 class="card-title">Título do Jogo 1</h5>
-                  <p class="card-text">R$29.99</p>
-                  <a href="detalhe_produto.html" class="btn btn-primary">Detalhes</a>
+          <div class="row d-flex justify-content-center">
+            <?php  
+              $quebra = 0;
+              $dados = mysqli_query($conexao, "SELECT * FROM jogos"); 
+              while ($jogo = mysqli_fetch_array($dados)): 
+            ?>
+            <?php 
+              if (($quebra % 3) === 0 && $quebra !== 0) {
+                print '
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="row d-flex justify-content-center">';
+              }
+              $quebra++;
+             ?>
+              <div class="col-md-4">
+                <div class="card">
+                  <img src="gerenciador/img/<?php print $jogo['imagem']; ?>" class="card-img-top imagem-jogo-destaque" alt="Game 1">
+                  <div class="card-body">
+                    <h5 class="card-title"><?php print $jogo['nome']; ?></h5>
+                    <p class="card-text">R$<?php print $jogo['preco']; ?></p>
+                    <a href="jogo.php?id=<?php print $jogo['id']; ?>" class="btn btn-primary">Detalhes</a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card">
-                <img src="gerenciador/img/image2.jpg" class="card-img-top imagem-jogo-destaque" alt="Game 2">
-                <div class="card-body">
-                  <h5 class="card-title">Título do Jogo 2</h5>
-                  <p class="card-text">R$39.99</p>
-                  <a href="detalhe_produto.html" class="btn btn-primary">Detalhes</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card">
-                <img src="gerenciador/img/image3.jpg" class="card-img-top imagem-jogo-destaque" alt="Game 2">
-                <div class="card-body">
-                  <h5 class="card-title">Título do Jogo 2</h5>
-                  <p class="card-text">R$39.99</p>
-                  <a href="detalhe_produto.html" class="btn btn-primary">Detalhes</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Adicione mais itens de carrossel conforme necessário -->
-
-        <div class="carousel-item">
-          <div class="row">
-            <div class="col-md-4">
-              <div class="card">
-                <img src="gerenciador/img/image4.jpg" class="card-img-top imagem-jogo-destaque" alt="Game 1">
-                <div class="card-body">
-                  <h5 class="card-title">Título do Jogo 4</h5>
-                  <p class="card-text">R$29.99</p>
-                  <a href="detalhe_produto.html" class="btn btn-primary">Detalhes</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card">
-                <img src="gerenciador/img/image5.jpg" class="card-img-top imagem-jogo-destaque" alt="Game 2">
-                <div class="card-body">
-                  <h5 class="card-title">Título do Jogo 5</h5>
-                  <p class="card-text">R$39.99</p>
-                  <a href="detalhe_produto.html" class="btn btn-primary">Detalhes</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card">
-                <img src="gerenciador/img/image6.jpg" class="card-img-top imagem-jogo-destaque" alt="Game 2">
-                <div class="card-body">
-                  <h5 class="card-title">Título do Jogo 6</h5>
-                  <p class="card-text">R$39.99</p>
-                  <a href="detalhe_produto.html" class="btn btn-primary">Detalhes</a>
-                </div>
-              </div>
-            </div>
+            <?php 
+              endwhile;
+            ?>
           </div>
         </div>
       </div>

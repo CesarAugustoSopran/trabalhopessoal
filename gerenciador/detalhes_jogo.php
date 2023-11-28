@@ -4,6 +4,7 @@
     <title>Detalhes do Jogo</title>
     <!-- Adicione o link para a biblioteca Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link href="../estilos/estilo.css" rel="stylesheet">
 </head>
 <body>
     <?php
@@ -75,6 +76,9 @@
                     <div class="mb-3">
                         <label for="descricao" class="form-label">Descrição:</label>
                         <textarea class="form-control" id="descricao" name="descricao"><?php print $jogo['descricao']; ?></textarea>
+                    </div>
+                    <div class="mb-3 d-flex justify-content-center">
+                        <img src="img/<?php print $jogo['imagem']; ?>" class="img-fluid imagem-jogo-destaque" alt="Banner Imagem">
                     </div>
                     <div class="mb-3">
                         <label for="imagem" class="form-label">Imagem:</label>

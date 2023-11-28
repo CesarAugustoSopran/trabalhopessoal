@@ -4,6 +4,7 @@
     <title>Detalhes do Banner</title>
     <!-- Adicione o link para a biblioteca Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link href="../estilos/estilo.css" rel="stylesheet">
 </head>
 <body>
     <?php
@@ -58,16 +59,19 @@
                     </div>
                     <div class="mb-3">
                         <label for="jogo" class="form-label">Jogo do Banner:</label>
-                        <select class="form-control" id="jogo" name="jogo" value="<?php print $banner['jogo']; ?>" required>
+                        <select class="form-control" id="jogo" name="jogo" required>
                         <?php  
                             $dados = mysqli_query($conexao, "SELECT * FROM jogos"); 
                             while ($jogo = mysqli_fetch_array($dados)): 
                         ?>
-                        <option value="<?php print $jogo['id']; ?>"><?php print $jogo['nome']; ?></option>
+                        <option value="<?php print $jogo['id']; ?>" <?php print ($jogo['id'] == $banner['jogo'] ? 'selected' : ''); ?>><?php print $jogo['nome']; ?></option>
                         <?php 
                             endwhile;
                         ?>
                         </select>
+                    </div>
+                    <div class="mb-3 d-flex justify-content-center">
+                        <img src="img/<?php print $banner['imagem']; ?>" class="img-fluid imagem-banner" alt="Banner Imagem">
                     </div>
                     <div class="mb-3">
                         <label for="imagem" class="form-label">Imagem:</label>

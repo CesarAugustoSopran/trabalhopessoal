@@ -52,7 +52,16 @@
                     </div>
                     <div class="mb-3">
                         <label for="jogo" class="form-label">Jogo do Banner:</label>
-                        <input type="number" class="form-control" id="jogo" name="jogo" value="" required>
+                        <select class="form-control" id="jogo" name="jogo" value="" required>
+                            <?php  
+                                $dados = mysqli_query($conexao, "SELECT * FROM jogos"); 
+                                while ($jogo = mysqli_fetch_array($dados)): 
+                            ?>
+                            <option value="<?php print $jogo['id']; ?>"><?php print $jogo['nome']; ?></option>
+                            <?php 
+                                endwhile;
+                            ?>
+                        </select>
                     </div>
                     <div class="mb-3">
                         <label for="imagem" class="form-label">Imagem:</label>
