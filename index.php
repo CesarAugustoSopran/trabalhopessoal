@@ -86,7 +86,7 @@
                   <div class="card-body">
                     <h5 class="card-title"><?php print $jogo['nome']; ?></h5>
                     <p class="card-text">R$<?php print $jogo['preco']; ?></p>
-                    <a href="jogo.php?id=<?php print $jogo['id']; ?>" class="btn btn-primary">Detalhes</a>
+                    <a href="jogo.php?id=<?php print $jogo['id']; ?>" class="btn btn-primary" style="width: 100%">Detalhes</a>
                   </div>
                 </div>
               </div>
