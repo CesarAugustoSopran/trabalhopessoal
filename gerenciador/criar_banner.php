@@ -10,16 +10,12 @@ $file = $_FILES['imagem']["name"];
 $ext = pathinfo($file, PATHINFO_EXTENSION);
 
 $nome = $_POST['nome'];
-$plataforma = $_POST['plataforma'];
-$preco = $_POST['preco'];
-$avaliacoes = $_POST['avaliacoes'];
-$classificacao = $_POST['classificacao'];
-$descricao = $_POST['descricao'];
+$jogo = $_POST['jogo'];
 $imagem = $dataFormatada.$horarioFormatado.'.'.$ext;
 
 include("../conexao.php");
 
-$inserirbanco = mysqli_query($conexao, "INSERT INTO jogos (`nome`, `plataforma`, `preco`, `avaliacoes`, `classificacao`, `descricao`, `imagem`) VALUES ('$nome', '$plataforma', '$preco', $avaliacoes, $classificacao, '$descricao', '$imagem');");
+$inserirbanco = mysqli_query($conexao, "INSERT INTO banners (`nome`, `jogo`, `imagem`) VALUES ('$nome', $jogo, '$imagem');");
 if ($inserirbanco) {
     if ($_FILES["imagem"]["error"] > 0) {
         echo "Erro no upload: " . $_FILES["imagem"]["error"];
@@ -27,5 +23,5 @@ if ($inserirbanco) {
         move_uploaded_file($_FILES['imagem']["tmp_name"],'img/'.$imagem);
     }
 }
-header("location: lista_jogos.php");
+header("location: lista_banners.php");
 ?>

@@ -22,7 +22,7 @@
   <section class="container my-4">
     <div class="row">
       <div class="col-md-6">
-        <img src="img/image1.jpg" class="img-fluid imagem-detalhe" alt="Game 1">
+        <img src="gerenciador/img/image1.jpg" class="img-fluid imagem-detalhe" alt="Game 1">
       </div>
       <div class="col-md-6">
         <h2 class="pb-4">Título do Jogo 1</h2>

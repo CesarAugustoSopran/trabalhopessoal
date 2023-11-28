@@ -50,31 +50,35 @@
                     $dados = mysqli_query($conexao, "SELECT * FROM jogos where id = ".$_GET['id']); 
                     $jogo = mysqli_fetch_array($dados);
                 ?>
-                <form method="post" action="editar_quarto.php">
+                <form method="post" action="editar_jogo.php" enctype="multipart/form-data">
                     <input type="hidden" id="id" name="id" value="<?php print $jogo['id']; ?>">
                     <div class="mb-3">
                         <label for="nome" class="form-label">Titulo:</label>
-                        <input type="text" class="form-control" id="nome" name="nome" value="<?php print $jogo['nome']; ?>">
+                        <input type="text" class="form-control" id="nome" name="nome" value="<?php print $jogo['nome']; ?>" required>
                     </div>
                     <div class="mb-3">
                         <label for="plataforma" class="form-label">Plataforma:</label>
-                        <input type="text" class="form-control" id="plataforma" name="plataforma" value="<?php print $jogo['plataforma']; ?>">
+                        <input type="text" class="form-control" id="plataforma" name="plataforma" value="<?php print $jogo['plataforma']; ?>" required>
                     </div>
                     <div class="mb-3">
                         <label for="preco" class="form-label">Preço (R$):</label>
-                        <input type="number" class="form-control" id="preco" name="preco" value="<?php print $jogo['preco']; ?>">
+                        <input type="number" class="form-control" id="preco" name="preco" value="<?php print $jogo['preco']; ?>" required>
                     </div>
                     <div class="mb-3">
                         <label for="avaliacoes" class="form-label">Avaliações dos criticos:</label>
-                        <input type="number" class="form-control" id="avaliacoes" name="avaliacoes" value="<?php print $jogo['avaliacoes']; ?>">
+                        <input type="number" class="form-control" id="avaliacoes" name="avaliacoes" value="<?php print $jogo['avaliacoes']; ?>" required>
                     </div>
                     <div class="mb-3">
                         <label for="classificacao" class="form-label">Classificação indicativa:</label>
-                        <input type="number" class="form-control" id="classificacao" name="classificacao" value="<?php print $jogo['classificacao']; ?>">
+                        <input type="number" class="form-control" id="classificacao" name="classificacao" value="<?php print $jogo['classificacao']; ?>" required>
                     </div>
                     <div class="mb-3">
                         <label for="descricao" class="form-label">Descrição:</label>
                         <textarea class="form-control" id="descricao" name="descricao"><?php print $jogo['descricao']; ?></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="imagem" class="form-label">Imagem:</label>
+                        <input type="file" class="form-control" id="imagem" name="imagem" value="" accept="image/*" required>
                     </div>
                     <button type="submit" class="btn btn-primary">Salvar Alterações</button>
                     <a href="lista_jogos.php" class="btn btn-secondary">Voltar para a Listagem de Jogos</a>

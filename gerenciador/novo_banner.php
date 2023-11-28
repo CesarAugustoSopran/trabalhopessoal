@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Novo Jogo</title>
+    <title>Novo Banner</title>
     <!-- Adicione o link para a biblioteca Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
@@ -45,37 +45,21 @@
         <h1 class="text-center">Dados do Jogo</h1>
         <div class="card">
             <div class="card-body">
-                <form method="post" action="criar_jogo.php" enctype="multipart/form-data">
+                <form method="post" action="criar_banner.php" enctype="multipart/form-data">
                     <div class="mb-3">
-                        <label for="nome" class="form-label">Titulo:</label>
+                        <label for="nome" class="form-label">Nome do Banner:</label>
                         <input type="text" class="form-control" id="nome" name="nome" value="" required>
                     </div>
                     <div class="mb-3">
-                        <label for="plataforma" class="form-label">Plataforma:</label>
-                        <input type="text" class="form-control" id="plataforma" name="plataforma" value="" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="preco" class="form-label">Preço (R$):</label>
-                        <input type="number" class="form-control" id="preco" name="preco" value="" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="avaliacoes" class="form-label">Avaliações dos criticos:</label>
-                        <input type="number" class="form-control" id="avaliacoes" name="avaliacoes" value="" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="classificacao" class="form-label">Classificação indicativa:</label>
-                        <input type="number" class="form-control" id="classificacao" name="classificacao" value="" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="descricao" class="form-label">Descrição:</label>
-                        <textarea class="form-control" id="descricao" name="descricao"></textarea>
+                        <label for="jogo" class="form-label">Jogo do Banner:</label>
+                        <input type="number" class="form-control" id="jogo" name="jogo" value="" required>
                     </div>
                     <div class="mb-3">
                         <label for="imagem" class="form-label">Imagem:</label>
-                        <input type="file" class="form-control" id="imagem" name="imagem" value=""  accept="image/*" required>
+                        <input type="file" class="form-control" id="imagem" name="imagem" value="" accept="image/*" required>
                     </div>
                     <button type="submit" class="btn btn-primary">Salvar Alterações</button>
-                    <a href="lista_jogos.php" class="btn btn-secondary">Voltar para a Listagem de Jogos</a>
+                    <a href="lista_banners.php" class="btn btn-secondary">Voltar para a Listagem de Banners</a>
                 </form>
             </div>
         </div>

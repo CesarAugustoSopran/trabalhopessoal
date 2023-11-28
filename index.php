@@ -22,13 +22,13 @@
     <div id="carouselBanners" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="img/image1.jpg" class="d-block w-100 imagem-banner" alt="Game 1">
+          <img src="gerenciador/img/image1.jpg" class="d-block w-100 imagem-banner" alt="Game 1">
         </div>
         <div class="carousel-item">
-          <img src="img/image2.jpg" class="d-block w-100 imagem-banner" alt="Game 2">
+          <img src="gerenciador/img/image2.jpg" class="d-block w-100 imagem-banner" alt="Game 2">
         </div>
         <div class="carousel-item">
-          <img src="img/image3.jpg" class="d-block w-100 imagem-banner" alt="Game 3">
+          <img src="gerenciador/img/image3.jpg" class="d-block w-100 imagem-banner" alt="Game 3">
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselBanners" data-bs-slide="prev">
@@ -60,7 +60,7 @@
           <div class="row">
             <div class="col-md-4">
               <div class="card">
-                <img src="img/image1.jpg" class="card-img-top imagem-jogo-destaque" alt="Game 1">
+                <img src="gerenciador/img/image1.jpg" class="card-img-top imagem-jogo-destaque" alt="Game 1">
                 <div class="card-body">
                   <h5 class="card-title">Título do Jogo 1</h5>
                   <p class="card-text">R$29.99</p>
@@ -70,7 +70,7 @@
             </div>
             <div class="col-md-4">
               <div class="card">
-                <img src="img/image2.jpg" class="card-img-top imagem-jogo-destaque" alt="Game 2">
+                <img src="gerenciador/img/image2.jpg" class="card-img-top imagem-jogo-destaque" alt="Game 2">
                 <div class="card-body">
                   <h5 class="card-title">Título do Jogo 2</h5>
                   <p class="card-text">R$39.99</p>
@@ -80,7 +80,7 @@
             </div>
             <div class="col-md-4">
               <div class="card">
-                <img src="img/image3.jpg" class="card-img-top imagem-jogo-destaque" alt="Game 2">
+                <img src="gerenciador/img/image3.jpg" class="card-img-top imagem-jogo-destaque" alt="Game 2">
                 <div class="card-body">
                   <h5 class="card-title">Título do Jogo 2</h5>
                   <p class="card-text">R$39.99</p>
@@ -97,7 +97,7 @@
           <div class="row">
             <div class="col-md-4">
               <div class="card">
-                <img src="img/image4.jpg" class="card-img-top imagem-jogo-destaque" alt="Game 1">
+                <img src="gerenciador/img/image4.jpg" class="card-img-top imagem-jogo-destaque" alt="Game 1">
                 <div class="card-body">
                   <h5 class="card-title">Título do Jogo 4</h5>
                   <p class="card-text">R$29.99</p>
@@ -107,7 +107,7 @@
             </div>
             <div class="col-md-4">
               <div class="card">
-                <img src="img/image5.jpg" class="card-img-top imagem-jogo-destaque" alt="Game 2">
+                <img src="gerenciador/img/image5.jpg" class="card-img-top imagem-jogo-destaque" alt="Game 2">
                 <div class="card-body">
                   <h5 class="card-title">Título do Jogo 5</h5>
                   <p class="card-text">R$39.99</p>
@@ -117,7 +117,7 @@
             </div>
             <div class="col-md-4">
               <div class="card">
-                <img src="img/image6.jpg" class="card-img-top imagem-jogo-destaque" alt="Game 2">
+                <img src="gerenciador/img/image6.jpg" class="card-img-top imagem-jogo-destaque" alt="Game 2">
                 <div class="card-body">
                   <h5 class="card-title">Título do Jogo 6</h5>
                   <p class="card-text">R$39.99</p>
