@@ -1,6 +1,10 @@
 <?php 
 header('Content-Type: text/html; charset=utf-8');
 
+include("../conexao.php");
+
+$id = $_POST['id'];
+
 $dados = mysqli_query($conexao, "SELECT * FROM banners WHERE id = $id;"); 
 $banner = mysqli_fetch_array($dados);
 
@@ -14,10 +18,8 @@ $ext = pathinfo($file, PATHINFO_EXTENSION);
 
 $nome = $_POST['nome'];
 $jogo = $_POST['jogo'];
-$id = $_POST['id'];
-$imagem = $dataFormatada.$horarioFormatado.'.'.$ext;
 
-include("../conexao.php");
+$imagem = $dataFormatada.$horarioFormatado.'.'.$ext;
 
 $inserirbanco = mysqli_query($conexao, "UPDATE banners set `nome` = '$nome', `jogo` = '$jogo', `imagem` = '$imagem' WHERE id = $id;");
 if ($inserirbanco) {
