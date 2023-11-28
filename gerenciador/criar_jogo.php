@@ -14,10 +14,12 @@ $plataforma = $_POST['plataforma'];
 $preco = $_POST['preco'];
 $avaliacoes = $_POST['avaliacoes'];
 $classificacao = $_POST['classificacao'];
-$descricao = $_POST['descricao'];
+$descricao = addslashes($_POST['descricao']);
 $imagem = $dataFormatada.$horarioFormatado.'.'.$ext;
 
 include("../conexao.php");
+
+var_dump("INSERT INTO jogos (`nome`, `plataforma`, `preco`, `avaliacoes`, `classificacao`, `descricao`, `imagem`) VALUES ('$nome', '$plataforma', '$preco', $avaliacoes, $classificacao, '$descricao', '$imagem');");
 
 $inserirbanco = mysqli_query($conexao, "INSERT INTO jogos (`nome`, `plataforma`, `preco`, `avaliacoes`, `classificacao`, `descricao`, `imagem`) VALUES ('$nome', '$plataforma', '$preco', $avaliacoes, $classificacao, '$descricao', '$imagem');");
 if ($inserirbanco) {
